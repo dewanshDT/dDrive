@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -17,9 +16,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #213547;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,10 +32,11 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #747bff;
 }
 
-body, html {
+body,
+html {
   min-width: 100vw;
   min-height: 100vh;
 }
@@ -54,12 +53,15 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  text-align: center;
+  background-color: #2dc033;
+  color: white;
   cursor: pointer;
   transition: border-color 0.25s;
   display: flex;
   align-items: center;
-  gap: .5em;
+  justify-content: center;
+  gap: 0.5em;
 }
 button:hover {
   border-color: #646cff;
@@ -68,20 +70,6 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 
 @keyframes logo-spin {
   from {
@@ -116,10 +104,21 @@ button:focus-visible {
   padding: 2rem;
 }
 
-.container h3 {
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h3 {
   font-size: x-large;
   width: 100%;
   text-align: left;
+  font-weight: normal;
+  color: #2dc033;
+}
+
+.header h3 > strong {
 }
 
 .files-grid {
@@ -137,16 +136,79 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.7rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0.5rem;
+}
+
+.files-grid li:hover {
+  border: 1px solid #2dc033;
 }
 
 .files-grid li .file-icon {
-  font-size: 8rem;
+  font-size: 5rem;
+  color: #585858;
+}
+
+.files-grid li div {
+  font-size: 0.9rem;
+  color: #213547;
+  background-color: #dbdbdb00;
 }
 
 .uploader {
   display: flex;
   align-items: center;
-  margin-top: auto;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #ebebeb;
+  padding: 10px;
+  border-radius: 18px;
 }
 
+.uploader input[type="file"] {
+  padding: 0.2rem;
+  height: 100%;
+}
+
+.login-component {
+  background-color: #ebebeb;
+  padding: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-height: 500px;
+  min-width: 400px;
+}
+
+.login-component > button {
+  margin-top: auto;
+  width: 100%;
+}
+
+.login-component div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.login-component input {
+  padding: 0.7em 1em;
+  width: 100%;
+  border-radius: 0.5em;
+  border: none;
+}
+
+.login-component h6 {
+  font-size: 1.4rem;
+}
+
+.login h5 {
+  font-weight: normal;
+  color: #2dc033;
+  font-size: 1.5rem;
+}
